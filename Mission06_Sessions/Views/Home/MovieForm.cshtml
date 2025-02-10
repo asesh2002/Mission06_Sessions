@@ -1,0 +1,48 @@
+@model Form
+
+@{
+    ViewData["Title"] = "Submit a movie form";
+}
+
+<h1>Movie Input Form</h1>
+<form method="post" asp-action="MovieForm">
+    @* required *@
+    <label asp-for="Category">Category</label>
+    <input asp-for="Category"/>
+    <br/>
+    @* required *@
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title"/>
+    <br/>
+    @* required *@
+    <label asp-for="Year">Year</label>
+    <input asp-for="Year"/>
+    <br/>
+    @* required *@
+    @* dropdown *@
+    <label asp-for="Rating">Rating</label>
+    <select asp-for="Rating">
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG13">PG-13</option>
+        <option value="R">R</option>
+    </select>
+    <br/>
+    @* not required *@
+    <label asp-for="Edited">Edited</label>
+    <select asp-for="Edited">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br/>
+    @* not required *@
+    <label asp-for="LentTo">Lent To:</label>
+    <input asp-for="LentTo"/>
+    <br/>
+    @* not required *@
+    <label asp-for="Notes">Notes:</label>
+    <input asp-for="Notes"/>
+    <br/>
+    <button type="submit">Submit form</button>
+
+</form>
