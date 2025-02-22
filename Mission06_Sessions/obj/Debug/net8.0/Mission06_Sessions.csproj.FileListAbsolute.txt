@@ -125,3 +125,4 @@
 /Users/amysessions/RiderProjects/Mission06_Sessions/Mission06_Sessions/obj/Debug/net8.0/Mission06_Sessions.pdb
 /Users/amysessions/RiderProjects/Mission06_Sessions/Mission06_Sessions/obj/Debug/net8.0/Mission06_Sessions.genruntimeconfig.cache
 /Users/amysessions/RiderProjects/Mission06_Sessions/Mission06_Sessions/obj/Debug/net8.0/ref/Mission06_Sessions.dll
+/Users/amysessions/RiderProjects/Mission06_Sessions/Mission06_Sessions/obj/Debug/net8.0/Mission06_Sessions.sourcelink.json

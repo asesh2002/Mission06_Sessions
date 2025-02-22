@@ -8,5 +8,6 @@ public class MovieFormContext : DbContext
     {
         
     }
-    public DbSet<Form> Forms { get; set; }
+    public DbSet<Movie> Movies { get; set; }
+    public DbSet<Category> Categories { get; set; }
 }

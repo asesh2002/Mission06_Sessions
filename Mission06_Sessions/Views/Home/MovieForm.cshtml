@@ -1,22 +1,37 @@
-@model Form
+@model Movie
 
 @{
     ViewData["Title"] = "Submit a movie form";
 }
 
 <h1>Movie Input Form</h1>
-<form method="post" asp-action="MovieForm">
+<form method="post" asp-action="Edit">
     @* required *@
-    <label asp-for="Category">Category</label>
-    <input asp-for="Category"/>
+    @* <label asp-for="Category">Category</label> *@
+    @* <input asp-for="Category"/> *@
     <br/>
     @* required *@
+    <input type="hidden" asp-for="MovieId"/>
+    <input type="hidden" asp-for="CategoryId"/>
+    
     <label asp-for="Title">Title</label>
     <input asp-for="Title"/>
     <br/>
+    
+    @* category dropdown *@
+    <label asp-for="CategoryId">Category:</label>
+    <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))">
+        <option value="0">-- Select a Category --</option> <!-- Prevents blank selection -->
+    </select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+    <br/>
+    
     @* required *@
     <label asp-for="Year">Year</label>
     <input asp-for="Year"/>
+    <br/>
+    <label asp-for="Director">Director</label>
+    <input asp-for="Director"/>
     <br/>
     @* required *@
     @* dropdown *@
@@ -38,6 +53,9 @@
     @* not required *@
     <label asp-for="LentTo">Lent To:</label>
     <input asp-for="LentTo"/>
+    <br/>
+    <label asp-for="CopiedToPlex">CopiedToPlex</label>
+    <input asp-for="CopiedToPlex"/>
     <br/>
     @* not required *@
     <label asp-for="Notes">Notes:</label>
