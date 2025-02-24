@@ -55,7 +55,10 @@
     <input asp-for="LentTo"/>
     <br/>
     <label asp-for="CopiedToPlex">CopiedToPlex</label>
-    <input asp-for="CopiedToPlex"/>
+    <select asp-for="CopiedToPlex">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
     <br/>
     @* not required *@
     <label asp-for="Notes">Notes:</label>

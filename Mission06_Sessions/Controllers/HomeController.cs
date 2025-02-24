@@ -39,7 +39,7 @@ public class HomeController : Controller
             _context.Movies.Add(response); //add record to the database 
             _context.SaveChanges(); //commit changes to database 
                     
-            return View("Index", response);
+            return View("Index");
         }
         else //invalid data
         {

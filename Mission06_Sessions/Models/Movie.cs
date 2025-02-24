@@ -9,9 +9,7 @@ public class Movie
 // form items go here
     [Key]
     public int MovieId { get; set; }
-
-    [Required(ErrorMessage = "Category selection is required.")]
-    public int CategoryId { get; set; }
+    public int? CategoryId { get; set; }
 
     [ForeignKey("CategoryId")]
     public Category? Category { get; set; } 
@@ -33,7 +31,7 @@ public class Movie
     public string? LentTo { get; set; }
     
     [Required(ErrorMessage = "Please enter a value")]
-    public int? CopiedToPlex { get; set; }
+    public bool? CopiedToPlex { get; set; }
 
     [StringLength(25)] 
     public string? Notes { get; set; }
